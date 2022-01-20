@@ -1,6 +1,19 @@
+.choiceCategory{
+  background-color: $beige-1;
+
+
+  ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  
+}
 .articlesContent{
 
     background-color: $beige-1;
+
 
 
   .articlesList{

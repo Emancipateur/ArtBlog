@@ -1,5 +1,6 @@
 import React from 'react';
 import Articles from '../component/Articles';
+import Footer from '../component/Footer';
 import Header from '../component/Header';
 import WhatNew from '../component/WhatNew';
 
@@ -13,12 +14,9 @@ const Home = () => {
                 <div className="imgLeftSideHome"></div>
                 <div className="imgRightSideHome"></div>
                 < Articles/>
-          
-              
-
-
-            </div>
+                </div>
             
+                <Footer />
         </div>
     );
 };
