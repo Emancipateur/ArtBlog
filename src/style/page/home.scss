@@ -1,0 +1,53 @@
+
+.home{
+background-color: $beige-4;
+.homeContent{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    "imgLeft Article imgRight "
+    "WN Article imgRight "
+    " . Article .";
+    background-color: $beige-4  ;
+    gap: 1rem;
+    margin: 1rem;
+    border-radius: 25px;
+
+
+    .imgLeftSideHome{
+        background: url('../../../public/asset/enzo.jpg')no-repeat;
+        border: 2px solid $beige-2;
+        border-radius: 25px;
+        height: 800px;
+        width: 100%;
+        object-fit: contain;
+
+    }
+    .imgRightSideHome{
+        background: url('../../../public/asset/pete.jpg')no-repeat;
+        border: 2px solid $beige-2;
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    
+    }
+
+    .whatNew{
+        grid-area: WN;
+    }
+
+    .imgLeftSideHome{
+        grid-area:  imgLeft;
+    }
+    .imgRightSideHome{
+        grid-area: imgRight;
+    }
+    .articles{
+        grid-area: Article;
+
+    }
+}
+
+
+}
