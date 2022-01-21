@@ -5,7 +5,7 @@ const CatSlice = createSlice({
     initialState : { value : []},
     reducers : {
         change : (state, action) => {
-            state.value = [state, action.payload]
+            state.value = [ action.payload]
         }
     }
 

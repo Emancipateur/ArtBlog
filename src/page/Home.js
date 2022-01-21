@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Articles from "../component/Articles";
 import Footer from "../component/Footer";
 import Header from "../component/Header";
 import Block from "../component/Block";
+import { useSelector } from "react-redux";
+
 
 const Home = () => {
+const theme = useSelector((state) => state.category.value)
+
+
+  
+
+
+
+
   return (
     <div className="home">
       <Header />
 
       <div className="homeContent">
+        {/* <button onClick={()=> console.log(theme[1])}>hey</button> */}
       <div className="whatNew">
             <Block>
             <h2>What's New today ?</h2>
@@ -44,8 +55,9 @@ const Home = () => {
             </Block>
          </div>
 
-        <div className="imgLeftSideHome"></div>
-        <div className="imgRightSideHome"></div>
+      {theme[0] == 'Skate' ?    <div className="imgLeftSideHomeSkate"> </div> : <div className="imgLeftSideHomeGraf"> </div>} 
+       
+      {theme[0] == 'Skate' ?    <div className="imgRightSideHomeSkate"> </div> : <div className="imgRightSideHomeGraf"> </div>} 
         <Articles />
       </div>
 

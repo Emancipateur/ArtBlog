@@ -4,6 +4,7 @@ background-color: $beige-4;
 .homeContent{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 800px;
     grid-template-areas:
     "imgLeft Article imgRight "
     "WN Article areYouReady "
@@ -14,31 +15,40 @@ background-color: $beige-4;
     border-radius: 25px;
 
 
-    .imgLeftSideHome{
+    .imgLeftSideHomeGraf, .imgLeftSideHomeSkate{
         background: url('../../../public/asset/enzo.jpg')no-repeat;
         border: 2px solid $beige-2;
         border-radius: 25px;
         width: 100%;
+        height:auto;
         object-fit: contain;
 
     }
-    .imgRightSideHome{
+
+    .imgLeftSideHomeSkate{
+        background: url('../../../public/asset/tom.jpg')no-repeat;
+    }
+    .imgRightSideHomeGraf, .imgRightSideHomeSkate{
         background: url('../../../public/asset/pete.jpg')no-repeat;
         border: 2px solid $beige-2;
         border-radius: 25px;
         width: 100%;
+        height:auto;
         object-fit: contain;
     
+    }
+    .imgRightSideHomeSkate{
+        background: url('../../../public/asset/lucas.jpg')no-repeat;
     }
 
     .whatNew{
         grid-area: WN;
     }
 
-    .imgLeftSideHome{
+    .imgLeftSideHomeGraf, .imgLeftSideHomeSkate{
         grid-area:  imgLeft;
     }
-    .imgRightSideHome{
+    .imgRightSideHomeSkate, .imgRightSideHomeGraf{
         grid-area: imgRight;
     }
     .articles{

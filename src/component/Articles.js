@@ -12,6 +12,7 @@ const Articles = () => {
     const radios = ["Skate", "Graffiti"];
     const [selectedRadio, setSelectedRadio] = useState('');
  
+ 
 
     useEffect(() => {
       fetch("https://localhost:8000/api/articles", {
@@ -42,7 +43,6 @@ switch (selectedRadio){
          <p>Make a choice</p>
          </div>
         <ul>
-         {/* <button onClick={ ()=>  dispatch(change(selectedRadio))}>btn</button> */}
           {radios.map((radio) => {
             return (
               <li className="radioTheme" key={radio}>
@@ -52,6 +52,8 @@ switch (selectedRadio){
                   id={radio}
                   checked={radio === selectedRadio}
                   onChange={(e) => setSelectedRadio(e.target.value)}
+                  onClick={(e)=> (dispatch(change(e.target.value)))}
+                
                 />
               
                 <label className='labelChoice' htmlFor={radio}>{radio} </label>
