@@ -4,12 +4,22 @@ import './style/style.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import  CatSlice  from './store'
+
+
+const store = configureStore({
+  reducer : { category : CatSlice.reducer}
+})
 
 ReactDOM.render(
   <React.StrictMode>
+    <Provider store={store}>
   <Router>
     <App />
     </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

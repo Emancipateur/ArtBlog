@@ -1,11 +1,11 @@
-.whatNewContent{
-    background: $beige-1;   
+.blockContent{
+    background: $beige-2;   
     padding: 1rem;
     border-radius: 25px;
     margin: 0.2rem;
- height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }

@@ -6,8 +6,8 @@ background-color: $beige-4;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
     "imgLeft Article imgRight "
-    "WN Article imgRight "
-    " . Article .";
+    "WN Article areYouReady "
+    " . iframe .";
     background-color: $beige-4  ;
     gap: 1rem;
     margin: 1rem;
@@ -18,7 +18,6 @@ background-color: $beige-4;
         background: url('../../../public/asset/enzo.jpg')no-repeat;
         border: 2px solid $beige-2;
         border-radius: 25px;
-        height: 800px;
         width: 100%;
         object-fit: contain;
 
@@ -27,7 +26,6 @@ background-color: $beige-4;
         background: url('../../../public/asset/pete.jpg')no-repeat;
         border: 2px solid $beige-2;
         border-radius: 25px;
-        height: 800px;
         width: 100%;
         object-fit: contain;
     
@@ -45,6 +43,11 @@ background-color: $beige-4;
     }
     .articles{
         grid-area: Article;
+
+    }
+
+    .iframe{
+        grid-area: iframe;
 
     }
 

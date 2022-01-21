@@ -1,15 +1,62 @@
 .choiceCategory{
   background-color: $beige-1;
 
+  .choiceSkateGraf{
+  background-color: $beige-4;
+  color: $beige-2;
+    padding: 1.8rem;
+    font-size: 1.9rem;
+    border: 2px solid $beige-2;
+
+
+  }
+.labelChoice{
+
+}
+ 
+   
+  
+}
+.radioTheme{
+  padding: 1rem ;
+  border-radius: 4px;
+  box-shadow: 5px 5px 1px $beige-4;
+  border: 1px solid $beige-4;
+  background-color: $beige-2;
+  color: $beige-4;
+  font-size: 1.7rem;
+  
+
+ 
+  //  font-family: 'Mochiy Pop P One', sans-serif;
+
+
+
+}
+  input[type="radio"]{
+    appearance: none;
+  
+  }
+
 
   ul{
     display: flex;
     list-style: none;
     justify-content: space-around;
     padding: 1rem;
+
+    
+
+    :hover{
+      color : $beige-2;
+      background-color: $beige-4;
+      cursor: pointer;
+    }
+
+  
   }
   
-}
+
 .articlesContent{
 
     background-color: $beige-1;

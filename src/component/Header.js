@@ -8,7 +8,7 @@ const Header = () => {
                 <nav>
                     <ul>
                         <Link className='link' to='/'>Acceuil</Link>
-                        <Link to='/'>Catégories</Link>
+                        <p className='title'>Skate & Graf'</p>
                         <Link to='/login'>Se connecter</Link>
                        
                     </ul>

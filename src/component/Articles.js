@@ -1,11 +1,17 @@
 import React from 'react';
 import {useEffect, useState} from 'react'
+import { useDispatch } from 'react-redux';
+import { change } from '../store'
+
+
 const Articles = () => {
 
-    const  [articles, setArticles] = useState([])
-    const radios = ["Skate", "React"];
-    const [selectedRadio, setSelectedRadio] = useState('Skate');
+  const dispatch  = useDispatch();
 
+    const  [articles, setArticles] = useState([])
+    const radios = ["Skate", "Graffiti"];
+    const [selectedRadio, setSelectedRadio] = useState('');
+ 
 
     useEffect(() => {
       fetch("https://localhost:8000/api/articles", {
@@ -16,24 +22,30 @@ const Articles = () => {
         .then((data) => setArticles(data));
       
     }, []);
-console.log(articles.map(item  => item.category))
+
 
 switch (selectedRadio){
-  case "React" :
+  case "Graffiti" :
     setSelectedRadio("/api/categories/1");
     break;
   case "Skate":
-    setSelectedRadio("/api/categories/2");
+    setSelectedRadio("/api/categories/2")
     break;
+  
 }
 
     return (
       <div className="articles">
         <div className="choiceCategory">
+          <div  className='choiceSkateGraf'>
+         <h3>Skate or Graffiti ?</h3>
+         <p>Make a choice</p>
+         </div>
         <ul>
+         {/* <button onClick={ ()=>  dispatch(change(selectedRadio))}>btn</button> */}
           {radios.map((radio) => {
             return (
-              <li key={radio}>
+              <li className="radioTheme" key={radio}>
                 <input
                   type="radio"
                   value={radio}
@@ -41,7 +53,8 @@ switch (selectedRadio){
                   checked={radio === selectedRadio}
                   onChange={(e) => setSelectedRadio(e.target.value)}
                 />
-                <label htmlFor={radio}>{radio}</label>
+              
+                <label className='labelChoice' htmlFor={radio}>{radio} </label>
               </li>
             );
           })}
